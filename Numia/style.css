@@ -71,20 +71,10 @@ nav h1 {
 
 .navitems-div ul>li {
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.navitems-div ul>li:nth-child(2) {
-    opacity: 0.5;
-    transition: opacity 0.2s;
-}
-
-.navitems-div ul>li:nth-child(2):hover {
-    opacity: 1;
-}
-
-.navitems-div ul>li:nth-child(4) {
-    display: none;
-}
 
 .container1 {
     height: calc(100vh - 100px);
@@ -197,14 +187,10 @@ nav h1 {
     font-weight: 500;
     font-size: 1.3vmax;
     font-family: Roboto;
-    border-bottom: 2px solid #ff924e8c;
     transition: border-bottom 0.3s;
     cursor: pointer;
 }
 
-.left .dash_button:hover {
-    border-bottom: 2px solid #FF934E;
-}
 
 .getstartdiv .right {
     display: flex;
@@ -246,7 +232,6 @@ nav h1 {
 .productsdiv {
     display: flex;
     justify-content: center;
-    height: 97vh;
     width: 90vw;
     /* border: 1px solid white; */
 }
@@ -282,6 +267,7 @@ nav h1 {
 .card1 .productdesc {
     display: flex;
     flex-direction: column;
+    /* height: 120rem; */
     /* border: 1px solid pink; */
     justify-content: space-around;
     padding: 2vw;
@@ -301,17 +287,42 @@ nav h1 {
     line-height: 1.8vmax;
 }
 
-.productdesc>h3 {
-    margin-right: auto;
+.productdesc-text{
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid #ff924e80;
+    transition: border-bottom ease 0.2s;
+}
+
+.productdesc-text>h3 {
     font-weight: 400;
     color: #FF934E;
-    border-bottom: 2px solid #ff924e80;
-    transition: border-bottom 0.4s;
     cursor: pointer;
 }
 
-.productdesc>h3:hover {
+.arrow-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25px;   
+    width: 25px;
+    overflow: hidden;
+}
+
+.productdesc-text:hover .arrow{
+    transform: translateY(-80%);
+}
+
+.productdesc-text:hover {
     border-bottom: 2px solid #FF934E;
+}
+
+.arrow{
+    transform: translateY(13px);
+    transition: all ease 0.25s;
 }
 
 .container5 {
@@ -578,6 +589,17 @@ footer>.right>.sociallinks>ul>li {
 
 .social-icons{
     display: flex;
+}
+
+.social-icons a{
+    margin-right: 10px;
+}
+
+.social-icons a, .social-icons li{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 1rem;
 }
 
 a{
